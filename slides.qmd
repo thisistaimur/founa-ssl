@@ -1,0 +1,167 @@
+---
+title: "Self-Supervised Learning (SSL) for Ecological Modeling"
+subtitle: "FOUNA: Toward a Foundation Model for Biodiversity Restoration"
+author: "**[Taimur Khan](https://www.linkedin.com/in/taimur-khan-/)** -- Data Scientist @ Community Ecology department"
+bibliography: references.bib
+format: 
+  revealjs:
+    logo: UFZ_Logo_RGB_DE.png
+    css: logo.css
+    smaller: true
+    
+theme: white
+transition: slide
+footer: "FOUNA Workshop, AWI Potsdam, 11.2024"
+title-slide-attributes:
+    data-background-image: Screenshot 2024-10-29 at 13.58.11.png
+    data-background-size: fill
+    data-background-opacity: "0.3"
+---
+
+#
+
+![Source: Taimur Khan / [https://halletrees.de](halletree.de)](trees3.png)
+
+#
+
+![Source: DOP20: © GeoBasis-DE / LVermGeo ST 2022.](trees2.png)
+
+## Self-supervised vs Unsurpervised Learning
+
+![Source: [AI Stackexchange comment.](https://ai.stackexchange.com/questions/40341/what-is-the-difference-between-self-supervised-and-unsupervised-learning)](ssl.png)
+
+
+# SSL and Ecological Modeling
+::: {.nonincremental}
+- **Self-Supervised Learning (SSL):**  
+  A powerful tool for learning from vast, unlabeled ecological and environmental data, which are often costly to label.
+- **Goal:**  
+  Enable ecological modeling that captures patterns in biodiversity and ecosystem dynamics without needing extensive labeled datasets.
+:::
+
+
+# Core SSL Techniques for Ecology
+
+
+## Spatial Context Learning
+::: {.incremental}
+1. **Contrastive Learning (e.g., SimCLR, MoCo)**
+   - Learns feature representations by contrasting different "views" of the same environment (@khosla2020supervised).
+   - **Use Case:**  
+     Contrastive SSL can build robust habitat models by learning stable features across environmental conditions (e.g., day/night, seasonal changes). Or by contrasting different habitats to learn species-specific features.
+2. **Masked Image Modeling (e.g., MAE, BEiT)** (@cao2022understand)  
+   - Trains models by masking and reconstructing image parts, helping capture spatial context in fragmented or degraded habitats (@pantazis2021focus).
+   - **Use Case:**  
+     Satellite images with random masked regions help SSL models learn habitat structures useful for Species Distribution Models (SDMs).
+:::
+---
+
+### Temporal Context Learning
+
+::: {.incremental}
+1. **Temporal Contrastive Learning**
+   - Temporal contrastive learning uses contrastive loss on sequential video frames to create representations that capture temporal dynamics.   
+   - **Use Case:**  
+     Monitoring vegetation changes over time, capturing phenological shifts and habitat degradation.
+2. **Video Prediction ()**
+    - Predicts future frames in video sequences, useful for monitoring ecosystem dynamics.
+    - **Use Case:**  
+      Tracking glacier retreat, forest fires, or river dynamics.
+:::
+
+
+
+# Emerging Tools in Ecological SSL
+
+---
+
+::: {.incremental}
+
+1. **TerraTorch** (DLR, TU Munich, IBM)  
+   - Toolkit for geospatial foundation models for Earth observation, based on NASA-IBM’s Prithvi backbone model (@jorgensen2001fundamentals).  
+   - Potential for adapting to ecological remote sensing for tasks like vegetation mapping.  
+[GitHub Link](https://github.com/IBM/terratorch)
+  
+1. **EcoBERT** (University of Göttingen)  
+   - BERT-based model for ecological text data, enabling large-scale ecological knowledge extraction.
+   - Potential for integrating with spatial data for comprehensive ecological monitoring.
+[EcoBERT Paper](https://huggingface.co/ViktorDo/EcoBERT-Pretrained)
+  
+1. **Contrastive Learning in Kriging** (KCP)  
+   - Applying contrastive learning to spatial interpolation tasks, improving predictions in sparse data regions (@li2024non).
+   - Potential for enhancing species distribution models in data-sparse regions.
+[Github Link](https://github.com/bonaldli/KCP)
+:::
+
+
+# Challenges and Future Directions
+
+---
+
+## Challenges
+::: {.callout-important}
+- **Encoding Large-Scale Data**  
+  - Hyperspectral/multispectral data encoding remains a bottleneck, but new methods are emerging (@blumenstiel2024multi).  
+
+- **Temporal Alignment**
+    - Aligning temporal data sources like UAVs, satellite images, and in-situ observations remains a challenge for long-term monitoring.
+
+- **Reconciling Spatial Scales**  
+  - Data sources like UAVs, in-situ observations, and remote sensing vary significantly in spatial scale, requiring intensive alignment efforts.
+:::
+---
+
+## SSL in FOUNA: What Problems Can We Solve?
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {.callout-tip}
+## Suggestions
+1. **Broad Ecological Challenges:**  
+   SSL offers a foundation to address biodiversity loss, habitat monitoring, and climate impact studies.
+
+2. **Unified Model Scope:**  
+   Explore how one model might capture species distribution, habitat degradation, and temporal biodiversity shifts.
+
+3. **SSL as a Foundation**  
+   SSL provides foundational features for ecological applications, capturing environmental patterns critical for long-term monitoring.
+:::
+
+:::
+
+::: {.column width="70%"}
+![Founa overview.](founa.png)
+:::
+
+::::
+
+
+<!-- ---
+
+## Key Takeaways
+
+- **SSL in Ecology** is _a unique emergine method for unique challenges in Ecology_, enabling robust, scalable, and label-efficient ecological monitoring.
+  
+- **Core Techniques** like contrastive learning and temporal modeling are _key for capturing spatial and temporal context in ecological data_.
+  
+- **Tools like TerraTorch and DeepTrees** represent a new wave of _geospatial and ecological_ modeling capabilities.
+  
+- **Challenges in Data Encoding and Spatial Alignment** remain but are actively being addressed _currently_. -->
+
+---
+
+## Thank You! 🌍
+### Questions?
+- Slides avaiable on: https://thisistaimur.me/founa-ssl
+- Contact me: [taimur.khan@ufz.de](mailto:taimur.khan@ufz.de)
+
+::: {.callout-note appearance="simple"}
+
+## References
+
+::: {#refs}
+:::
+
+:::
