@@ -59,11 +59,11 @@ title-slide-attributes:
 ### Temporal Context Learning
 
 ::: {.incremental}
-1. **Temporal Contrastive Learning**
+1. **Temporal Contrastive Learning** (@khosla2020supervised) 
    - Temporal contrastive learning uses contrastive loss on sequential video frames to create representations that capture temporal dynamics.   
    - **Use Case:**  
      Monitoring vegetation changes over time, capturing phenological shifts and habitat degradation.
-2. **Video Prediction ()**
+2. **Video Prediction** (@blumenstiel2024multi)
     - Predicts future frames in video sequences, useful for monitoring ecosystem dynamics.
     - **Use Case:**  
       Tracking glacier retreat, forest fires, or river dynamics.
@@ -154,7 +154,7 @@ title-slide-attributes:
 
 ## Thank You! 🌍
 ### Questions?
-- Slides avaiable on: https://thisistaimur.me/founa-ssl
+- Slides avaiable on: [https://thisistaimur.me/founa-ssl/](https://thisistaimur.me/founa-ssl/)
 - Contact me: [taimur.khan@ufz.de](mailto:taimur.khan@ufz.de)
 
 ::: {.callout-note appearance="simple"}
